@@ -1,0 +1,305 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %																		%
+ %	Plantilla Latex para presentación del proyecto de curso				%
+ %	Programación de Aplicaciones para Internet y la Nube					%
+ %																		%
+ %	Creada por: Duván Pardo, Wilson López								%
+ %																		%
+ %	Versión: 0.1															%
+ %	Dapardoc@gmail.com ; Wilrilo@gmail.com								%
+ %																		% 
+ %	Se requieren los archivos plantilla.bbl y							% 
+ %	El directorio Imagenes que contiene: CECAD,DC, Elementos y RITA		%  
+ %																		%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt]{article}   			% Describe el tipo de documento, y el tamaño de la letra del texto
+
+\usepackage[utf8]{inputenc}				% Define codificación para que permita caracteres latinos (acentos)
+\usepackage[spanish,activeacute]{babel} 	% Paquete para poder escribir con tildes y otros caracteres especiales
+
+\usepackage{vmargin}						% Código para margenes y formato de página
+\setpapersize{A4}
+\setmargins	{2.2cm}     					% margen izquierdo
+			{1 cm}                 		% margen superior
+			{16.5cm}               		% anchura del texto
+			{23.42cm}             		% altura del texto
+			{20pt}                		% altura de los encabezados
+			{1.2cm}               		% espacio entre el texto y los encabezados
+			{0pt}                		% altura del pie de página
+			{2cm}                 		% espacio entre el texto y el pie de página
+
+\usepackage{amsmath}						% paquete para expresiones matemáticas
+\usepackage{amsfonts}					% paquete para escritura de ecuaciones 
+\usepackage{amssymb}						% paquete para caracteres especiales para ecuaciones 
+
+\usepackage{fancyhdr}					% Temas para encabezado y pie de pagina
+\usepackage{fancyvrb}
+\pagestyle{fancy} 
+
+\pagenumbering{arabic} 					% Numeración de paginas {arabic roman}
+\usepackage{hyperref}					% Para hipervinculos
+\usepackage{graphicx}					% Para incluir imágenes
+\usepackage{caption}						% Descripciones de las figuras
+\usepackage{subcaption}					% Descripción varias imagenes en usa sola figura
+\graphicspath{ {Imagenes/} }				% Directorio de imágenes esta capeta va donde esta el archivo tex
+
+
+\usepackage{color, colortbl}				% Colores para tablas
+\usepackage{listings}					% Para el código Fuente
+\usepackage{xcolor}						% para color en codigos o listrings
+\definecolor{limegreen}{RGB}{50,100,50}	% Definición de colores ejemplo verde en RGB
+\definecolor{Red}{RGB}{220,120,120}		% se definen colores para la tabla en el cronograma pueden ser RGB 0-255 o rgb 0-1 cada componente
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{azul}{RGB}{120,120,210}
+
+
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=2, numbersep=5pt}
+
+%Aquí inicia el documento.
+\begin{document}
+	% Se define el Encabezado
+	%clhead[]{Proyecto}
+	\lhead[]{Programación de Aplicaciones para Internet y la Nube}
+	\rhead[]{\textbf{2016-I}}
+	\renewcommand{\headrulewidth}{0.5pt}
+
+	\thispagestyle{empty}						% La primera página no lleva estilo (sin encabezado)
+	\begin{center}
+		\large {Programación de Aplicaciones para Internet y la Nube
+			\hspace{5 cm}\textbf{2016-I}}
+		\bigskip  
+		\textbf{
+				\LARGE{\\TALLER 4}}\\								% Nombre del proyecto
+	\end{center}	
+	\begin{flushright}	
+		\bigskip	
+		Nombre del Estudiante: \textbf{Duván Pardo, Wilson López}			% Nombre del estudiante
+	\end{flushright} 
+\section{INTRODUCCIÓN}
+Vagrant es un software informático que crea y configura entornos de desarrollo virtuales. Puede verse como un contenedor de nivel superior de todo el software de virtualización como VirtualBox, VMware, KVM y Contenedores de Linux (LXC), y alrededor de software de gestión de configuración, tales como Ansible, Chef, Salty y Pupplet.(tomado de \href{http://www.linuxjournal.com/content/introducing-vagrant}{Introducing Vagrant})\\
+
+Vagrant fue originalmente ligado a VirtualBox, pero la versión 1.1 agregó soporte a otro software de virtualización como VMware y KVM, y para entornos de servidores como Amazon EC2.( tomado de \href{http://cdn.oreillystatic.com/oreilly/booksamplers/9781449335830\_sampler.pdf}{Vagrant: Up and Running, Mitchell Hashimoto (2013)} y \href{https://en.wikipedia.org/wiki/O\%27Reilly\_Media}{O'Reilly Media})\\
+
+Vagrant está escrito en Ruby, pero se puede utilizar en proyectos escritos en otros lenguajes de programación tales como PHP, Python, Java, C \# y JavaScript.
+(tomado dw \href{http://www.rubyinside.com/vagrant-ruby-powered-virtualbox-vm-building-and-provisioning-3059.html}{Vagrant: EC2-Like Virtual Machine Building and Provisioning from Ruby} y \href{https://www.vagrantup.com/docs/getting-started/project\_setup.html}{Vagrant - Getting Started - Project Setup})\\
+
+Desde la versión 1.6, Vagrant soporta de forma nativa contenedores estibador, que en algunos casos puede servir como un sustituto de un sistema operativo completamente virtualizado. \href{https://www.hashicorp.com/blog/vagrant-1-6.html}{Vagrant 1.6, Mitchell Hashimoto (2014-05-06).}
+
+
+
+Vagrant se inició en enero de 2010 por Mitchell Hashimoto. Durante casi tres años, vagrant era un proyecto paralelo para Mitchell, un proyecto que trabajó en en sus horas libres después de su trabajo a tiempo completo. Durante este tiempo, vagrant llegó a ser de confianza y utilizado por una amplia gama de individuos en los equipos de desarrollo en las grandes empresas.\\
+
+
+En noviembre de 2012, se formó HashiCorp por Mitchell para respaldar el desarrollo de Vagrant a tiempo completo. HashiCorp construye adiciones comerciales y proporciona apoyo profesional y entrenamiento para Vagrant.\\
+
+
+Vagrant sigue siendo y siempre será un proyecto con licencia de código abierto. Cada versión de Vagrant es el trabajo de cientos de contribuciones individuales al proyecto de código abierto.(tomado de \href{https://www.vagrantup.com/about.html}{Vagrant-Hashicorp})
+	
+\section{OBJETIVO}
+Realizar el despliegue de entornos de desarrollo sencillos mediante la tecnología Vagrant utilizando como proveedor de infraestructura la tecnología VirtualBox.
+\newpage
+\section{ACTIVIDADES}	
+
+\begin{enumerate}
+
+
+	\item  Abrir una consola de comandos.
+	\item Validar la correcta instalación del software Vagrant ejecutando el comando \texttt{vagrant -h}
+	
+	\begin{figure}[ht] % Es preferible verificar la documentación para que la imagen quede correctamente segun el parámetro entre []
+		\centering
+		\includegraphics[scale=0.33]{2}   % Scale se utiliza para cambiar el tamaño de la imagen
+		\caption{Verificación por consola de la instalación de Vagrant} 
+	\end{figure}
+	
+	\item Adicionar la imagen del sistema operativo Ubuntu Trusty de 64 bits. Para ello, ejecutar el 	comando \texttt{vagrant box add ubuntu/trusty64} . La descarga debe tomar alrededor de 5 minutos.
+	
+	\begin{figure}[ht] % Es preferible verificar la documentación para que la imagen quede correctamente segun el parámetro entre []
+		\centering
+		\includegraphics[scale=0.4]{3}   % Scale se utiliza para cambiar el tamaño de la imagen
+		\caption{Adición del sistema operativo Ubuntu Trusty de 64 bits } 
+	\end{figure}
+	
+	\item Crear un directorio de trabajo clouapps (o cualquier otro nombre). Ingresar a ese directorio en la consola y ejecutar el comando\texttt{ vagrant init ubuntu/trusty64}. Después de ejecutar el comando, verificar que se haya creado un archivo denominado \texttt{\href{https://github.com/wilrilo/talleres/blob/master/file/taller4/clouapps/Vagrantfile}{Vagrantfile}}.
+	
+		\begin{figure}[ht] 
+			\centering
+			\includegraphics[scale=0.33]{4}   
+			\caption{Creación del directorio clouapps} 
+		\end{figure}
+\newpage	
+	\item Editar el archivo \texttt{\href{https://github.com/wilrilo/talleres/blob/master/file/taller4/clouapps/Vagrantfile}{Vagrantfile}} de forma que contenga la siguiente información
+	
+	\begin{small}
+		\begin{lstlisting}[frame=single]		
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure(2) do |config|
+
+config.vm.box = "ubuntu/trusty64"
+config.vm.network :forwarded_port, guest: 4000, host: 8100, host_ip: "127.0.0.1"
+config.vm.provision "puppet"
+config.vm.hostname = "www.cecad-example.com"
+
+end
+
+			
+		\end{lstlisting}
+	\end{small}
+	
+	
+			\begin{figure}[ht] 
+				\centering
+				\includegraphics[scale=0.4]{5}   
+				\caption{Archivo \texttt{Vagrantfile} editado.} 
+			\end{figure}
+			
+\item Crear un archivo “\texttt{\href{https://github.com/wilrilo/talleres/blob/master/file/taller4/clouapps/manifests/default.pp}{default.pp}}” en un directorio \texttt{manifests} que se encuentra en el mismo lugar del archivo \texttt{Vagrantfile}.
+
+\newpage
+
+\item Escribir el siguiente contenido en el archivo “\texttt{\href{https://github.com/wilrilo/talleres/blob/master/file/taller4/clouapps/manifests/default.pp}{default.pp}}”
+			
+	
+	
+	\begin{small}
+		\begin{lstlisting}[frame=single]	
+		
+exec { 'apt-get update':
+command => '/usr/bin/apt-get update -y'
+}
+
+package { 'nodejs':
+require => Exec['apt-get update']
+}
+
+package { 'lynx-cur':
+require => Exec['apt-get update']
+}
+
+package { 'ruby1.9.1-dev':
+require => Exec['apt-get update']
+}
+		\end{lstlisting}
+	\end{small}
+
+			\begin{figure}[ht] 
+				\centering
+				\includegraphics[scale=0.6]{6}   
+				\caption{Archivo \texttt{script.sh} editado.} 
+			\end{figure}	
+\newpage	
+\item Ejecutar el comando \texttt{vagrant up --provision}.\\
+
+
+
+con lo que obtenemos la siguiente respuesta:
+
+\begin{figure}[ht] 
+	\centering
+	\includegraphics[scale=0.7]{8}   
+	\caption{Ejecución del comando \texttt{vagrant up --provision}.} 
+\end{figure}
+
+A continuación se nuestra con mas detalle el resultado al ejecutar el comando  \texttt{vagrant up --provision}:\\
+ 
+	
+\begin{small}
+	\begin{lstlisting}[frame=single]	
+C:\Users\MR X\Desktop\clouapps>vagrant up --provision
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'ubuntu/trusty64'...
+==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: Setting the name of the VM: clouapps_default_1461814588241_21672
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+default: Adapter 1: nat
+==> default: Forwarding ports...
+default: 4000 (guest) => 8100 (host) (adapter 1)
+default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+default: SSH address: 127.0.0.1:2222
+default: SSH username: vagrant
+default: SSH auth method: private key
+default:
+default: Vagrant insecure key detected. Vagrant will automatically replace
+default: this with a newly generated keypair for better security.
+default:
+default: Inserting generated public key within guest...
+default: Removing insecure key from the guest if it's present...
+default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+default: The guest additions on this VM do not match the installed version of
+default: VirtualBox! In most cases this is fine, but in rare cases it can
+default: prevent things such as shared folders from working properly. If you see
+default: shared folder errors, please make sure the guest additions within the
+default: virtual machine match the version of VirtualBox you have installed on
+default: your host and reload your VM.
+default:
+default: Guest Additions Version: 4.3.36
+default: VirtualBox Version: 5.0
+==> default: Setting hostname...
+==> default: Mounting shared folders...
+default: /vagrant => C:/Users/MR X/Desktop/clouapps
+default: /tmp/vagrant-puppet/manifests-a11d1078b1b1f2e3bdea27312f6ba513 => 
+C:/Users/MR X/Desktop/clouapps/manifests
+==> default: Running provisioner: puppet...
+==> default: Running Puppet with default.pp...
+==> default: stdin: is not a tty
+==> default: Notice: Compiled catalog for www.cecad-example.com in environment
+ production in 0.25 seconds
+==> default: Notice: /Stage[main]/Main/Exec[apt-get update]/returns: executed
+ successfully
+==> default: Notice: /Stage[main]/Main/Package[lynx-cur]/ensure: ensure changed
+ 'purged' to 'present'
+==> default: Notice: /Stage[main]/Main/Package[nodejs]/ensure: ensure changed
+ 'purged' to 'present'
+==> default: Notice: /Stage[main]/Main/Package[ruby1.9.1-dev]/ensure: ensure 
+changed 'purged' to 'present'
+==> default: Notice: Finished catalog run in 53.66 seconds
+
+
+	\end{lstlisting}
+\end{small}
+
+
+
+
+
+\end{enumerate}
+
+\section{BIBLIOGRAFÍA}	
+\begin{itemize}
+	\item \href{http://www.linuxjournal.com/content/introducing-vagrant
+		}{http://www.linuxjournal.com/content/introducing-vagrant
+		}
+	\item \href{http://cdn.oreillystatic.com/oreilly/booksamplers/9781449335830\_sampler.pdf
+		}{http://cdn.oreillystatic.com/oreilly/booksamplers/9781449335830\_sampler.pdf
+		}
+	\item \href{https://en.wikipedia.org/wiki/O%27Reilly_Media
+		}{https://en.wikipedia.org/wiki/O%27Reilly_Media
+		}
+	\item \href{http://www.rubyinside.com/vagrant-ruby-powered-virtualbox-vm-building-and-provisioning-3059.html
+		}{http://www.rubyinside.com/vagrant-ruby-powered-virtualbox-vm-building-and-provisioning-3059.html
+		}
+	\item \href{https://www.vagrantup.com/docs/getting-started/project\_setup.html
+		
+		}{https://www.vagrantup.com/docs/getting-started/project\_setup.html}
+	\item \href{https://www.hashicorp.com/blog/vagrant-1-6.html
+		}{https://www.hashicorp.com/blog/vagrant-1-6.html
+		}
+	\item \href{https://www.vagrantup.com/about.html
+		}{https://www.vagrantup.com/about.html
+		}
+\end{itemize}
+\end{document}

@@ -1,0 +1,24 @@
+heat_template_version: 2013-05-23
+
+description: Desarrollo del taller 1 app en la nube
+
+parameters:
+
+  private_network_cidr:
+    type: string
+    label: Private network CIDR
+    description: Private Network CIDR
+    default: 192.168.200.0/24
+
+resources:
+
+   private_network:
+     type: OS::Neutron::Net
+
+   private_subnet:
+     type: OS::Neutron::Subnet
+     properties:
+       network_id: { get_resource: private_network }
+       cidr: {get_param: private_network_cidr}
+       dns_nameservers: 
+        - 8.8.8.8

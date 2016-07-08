@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Resumen}{3}{0}{1}
+\beamer@sectionintoc {2}{Contribuci'on de la investigaci'on}{4}{0}{2}
+\beamer@sectionintoc {3}{Evidencias de soporte}{5}{0}{3}
+\beamer@sectionintoc {4}{Comentarios de 'arbitro:}{8}{0}{4}
+\beamer@sectionintoc {5}{Bibliograf\IeC {\'\i }a}{9}{0}{5}

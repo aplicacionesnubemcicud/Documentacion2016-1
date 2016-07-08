@@ -1,0 +1,3 @@
+\frametitle{Bibliografía}
+        \bibliography{Biblio} 	%Para que aparezca toda la bibliografia que citamos en el documento Biblio.bib, Informe.bbl.
+       	\nocite{*}				%Para que aparezca toda la bibliografia que NO citamos en el documento, pero que utilizamos.

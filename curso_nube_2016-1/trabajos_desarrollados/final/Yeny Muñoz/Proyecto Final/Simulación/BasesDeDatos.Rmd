@@ -1,0 +1,33 @@
+---
+title: "Proyecto"
+output: html_document
+---
+```{r}
+MPW<- read.csv("https://dl.dropbox.com/s/u5gf20h7aw8n5sr/powerplant.csv", head = TRUE, col.names=c("MUESTRA","MPW1","MPW2","MPW3","MPW4","MPW5","MPW6","MPW7","MPW8","MPW9","MPW10","MPW11"), sep = ";")
+MPW
+summary(MPW)
+
+MDL<- read.csv("https://dl.dropbox.com/s/w79zfzj9lrnoy2q/ASSAMBLY.csv", head = TRUE, col.names=c("MUESTRA","MDL1","MDL2","MDL3","MDL4","MDL5","MDL6"), sep = ";")
+MDL
+summary(MDL)
+
+MG<- read.csv("https://dl.dropbox.com/s/lt48p31kiumd4k5/furnace.csv", head = TRUE, col.names=c("MUESTRA","MG1","MG2","MG3","MG4","MG5","MG6","MG7","MG8","MG9"), sep = ";")
+MG
+summary(MG)
+
+ME<- read.csv("https://dl.dropbox.com/s/ljxnb8fitqg79t4/MATERIA%20PRIMA.csv", head = TRUE, col.names=c("MUESTRA","ME1","ME2"), sep = ";")
+ME
+summary(ME)
+
+MPH<- read.csv("https://dl.dropbox.com/s/6uvyphbse2ahtvh/PAINT.csv", head = TRUE, col.names=c("MUESTRA","MPH1","MPH2","MPH3"), sep = ";")
+MPH
+summary(MPH)
+
+MPY<- read.csv("https://dl.dropbox.com/s/meyl8nbg5jk509g/WELDING.csv", head = TRUE, col.names=c("MUESTRA","MPY1","MPY2","MPY3","MPY4","MPY5","MPY6"), sep = ";")
+MPY
+summary(MPY)
+hist(MPY, main = "Título", xlab = "", ylab = "")
+
+```
+
+

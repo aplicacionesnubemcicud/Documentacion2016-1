@@ -1,0 +1,24 @@
+\begin{thebibliography}{}
+
+\bibitem[Yihui Xie]{Biblio1}
+Yihui Xie. xie@yihui.name
+\newblock {\em Dynamic Documents with R and knitr}.
+\newblock {\em Second Edition}.
+\newblock CRC Press 2015.
+
+\bibitem[Package ‘knitr’]{Biblio2}
+Yihui Xie. xie@yihui.name
+\newblock {\em A General-Purpose Package for Dynamic Report Generation in R}.
+\newblock {\em Version 1.12.3}.
+\newblock R topics documented, January 21, 2016.
+
+\bibitem[Package ‘knitr’]{Biblio3}
+Yihui Xie. xie@yihui.name
+\newblock {\em knitr Graphics Manual}.
+\newblock R topics documented, January 6, 2016
+
+
+
+
+
+\end{thebibliography}

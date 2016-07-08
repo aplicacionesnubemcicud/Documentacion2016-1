@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.2}{Descripci\363n del proyecto}{}% 2
+\BOOKMARK [1][-]{section.3}{Objetivos}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{General}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Especificos}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{Desarrollo del proyecto}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{Preparaci\363n de la Raspberry}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Ubidots}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{Programa en python }{section.4}% 9
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Codigo archivo programa.py:}{subsection.4.3}% 10
+\BOOKMARK [3][-]{subsubsection.4.3.2}{configuraci\363n IPv6}{subsection.4.3}% 11
+\BOOKMARK [3][-]{subsubsection.4.3.3}{pagina HTML}{subsection.4.3}% 12
+\BOOKMARK [2][-]{subsection.4.4}{Ejecuci\363n del programa}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.5}{Analisis de los datos }{section.4}% 14

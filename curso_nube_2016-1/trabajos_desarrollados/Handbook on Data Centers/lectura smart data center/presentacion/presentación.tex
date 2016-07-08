@@ -1,0 +1,209 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %																		%
+ %	Plantilla Latex para presentación del proyecto de curso				%
+ %	Programación de Aplicaciones para Internet y la Nube					%
+ %																		%
+ %	Creada por: Duván Pardo, Wilson López								%
+ %																		%
+ %	Versión: 0.2															%
+ %	Dapardoc@gmail.com ; Wilrilo@gmail.com								%
+ %																		% 
+ %	Se requieren los archivos  presentación.bbl							% 
+ %	El directorio Imagenes que contiene: escudoud.pdf,ECHO_OFF	 		%  
+ %																		%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{beamer}					% Describe el tipo de documento, y el tamaño de la letra del texto
+\usepackage[utf8]{inputenc}					% Define codificación para que permita caracteres latinos (acentos)
+\usepackage[spanish,activeacute]{babel} 		% Paquete para poder escribir con tildes y otros caracteres especiales
+
+\usepackage{amsmath}							% paquete para expresiones matemáticas
+\usepackage{amsfonts}						% paquete para escritura de ecuaciones 
+\usepackage{amssymb}							% paquete para caracteres especiales para ecuaciones 
+
+\usepackage{svg}								% Se utiliza para incluir imágenes vectorizadas en el documento (.pdf)
+\usepackage{hyperref}						% Para hipervinculos
+
+\usepackage{lmodern}							% http://ctan.org/pkg/lm
+\usepackage{listings}						% Para el código fuente
+\usepackage{xcolor}							% Para el color en código fuente
+\usepackage{graphicx}						% Para incluir imágenes
+\graphicspath{{Imagenes/}}					% Directorio de imágenes
+
+\bibliographystyle{apalike} 					% Bibliografia tipo APA
+
+\definecolor{limegreen}{RGB}{50,100,50}		% Definición de color
+\lstdefinestyle{base}{						% Para el color en código fuente
+	language=C,
+	emptylines=1,
+	breaklines=true,
+	showspaces=fasle,
+	showstringspaces=false,
+	extendedchars=true,
+	basicstyle=\ttfamily\color{black},
+	moredelim=**[is][\color{limegreen}]{'}{'},
+	moredelim=**[is][\color{blue}]{&}{&},
+}				
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}	% Muestra numeración al lado del código
+
+\mode<presentation>{	
+	\usetheme{Frankfurt}		
+% Temas: AnnArbor,Antibes, Bergen, Berkeley, Berlin, Boadilla, boxes, CambridgeUS, Copenhagen, Darmstadr, default, Dresden, Frankfurt*, Goettingen, Hannover, LLmenau, JuanLesPins, Luebeck, Madrid, Malmoe, Marburg, Montpellier, PaloAlto, Pittsburgh, Rochester, Singapore, Szeged, Warsaw.	
+	\usecolortheme{orchid}	
+% Colores:albatross, beaver, beetle, crane, default, dolphin, dove, fly, lily, orchid*, rose, seagull, seahorse, sidebartab, structure, whale, wolverine.	 
+}
+
+\logo{\includegraphics[scale=0.04]{escudoud}}
+\title{Informe de lectura de investigación Smart Data Center \\ --- \\ Smart Data center}
+\author{Estudiante: Wilson López}
+\institute[UD]{Universidad Distrital Francisco José de Caldas}
+\date{\today}
+
+\begin{document}	
+	
+\begin{frame}[fragile]							% Diapositiva Presentación
+		\titlepage 
+	
+\end{frame}	
+
+	\begin{frame}[fragile]							% Diapositiva Tabla de Contenido
+		\frametitle{Índice}	
+		\tableofcontents
+\end{frame}	
+
+
+
+\section{Resumen}
+\begin{frame}[fragile]						% Segunda 
+	\frametitle{Resumen}	
+	\begin{block}{}
+		\begin{itemize}
+			\item Optimización de consumo energetico en Data Center.
+			
+			
+			\item Compra y almacenamiento eficiente de energía.
+		\end{itemize}
+	\end{block}
+
+	  	
+				
+
+		
+
+\end{frame}		
+
+\section{Contribuci'on de la investigaci'on}
+\begin{frame}[fragile]						% Segunda 
+	\frametitle{Contribuci'on de la investigaci'on}					
+	\begin{center}
+	\begin{itemize}
+		\item El artículo SI contribuye:  método para determinar la compra y uso eficiente de la energía por medio de UPS para data center\\
+		
+		\item El algoritmo  “smart data center“ utiliza algoritmos de optimización Lyapunov. 
+		
+		\item Implementación del algoritmo en CECAD para mejorar consumo energético y vida útil de las UPS consumo CECAD aproximado 25KVA. 	
+		
+	\end{itemize}
+	\end{center}
+\end{frame}	
+
+
+
+
+\section{Evidencias de soporte}
+\begin{frame}[fragile]						% Segunda 
+	\frametitle{Evidencias de soporte}					
+	\begin{center}
+	\begin{itemize}
+		\item \href{http://www.sciencedirect.com/science/article/pii/S0378779604001257}{\textit{Electricity market price spike forecast with data mining techniques}}. escrito por X. Lu, Xin, Z. Y. Dong, y X. Li. realizaron un estudio de   los precios de la demanda de energía para predecir las futuras demandas de energía 
+		
+		\item En los articulos 
+			\href{http://sameekhan.seecs.nust.edu.pk/pub/B_K_2013_FGCS.pdf}{A Taxonomy and Survey on Green Data Center Networks},	
+			\href{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5683561&url=http\%3A\%2F\%2Fieeexplore.ieee.org\%2Fiel5\%2F5682081\%2F5683069\%2F05683561.pdf\%3Farnumber\%3D5683561}{GreenCloud: A Packet-level Simulator of Energyaware Cloud Computing Data Centers} y 	
+			 \href{http://www.hpl.hp.com/techreports/2007/HPL-2007-194.pdf}{No ‘power’ struggles: Coordinated multi-level power management for the data center} ; Se estudian la administración de energía de los centros de datos
+		
+	\end{itemize}
+					
+	\end{center}
+\end{frame}		
+				
+
+
+\begin{frame}[fragile]						% Segunda 
+	\frametitle{Evidencias de soporte}					
+	\begin{center}
+		Los siguientes artículos estudian el almacenamiento de energía en data center:
+		
+		\begin{itemize}
+			
+				
+		\item \textit{“	\href{http://www.cse.psu.edu/~buu1/papers/ps/asplos12.pdf}{Leveraging stored energyfor handling power emergencies in aggressively provisioned datacenters}”} de. S. Govindan, D. Wang, A. Sivasubramaniam, y B. Urgaonkar
+			
+		
+			
+	\item \textit{“\href{http://www.fang.ece.ufl.edu/mypaper/globecom11guoy.pdf}{Cutting down electricity cost in internet data centers by using energy storage}”}  de Y. Guo, Z. Ding, Y. Fang, and D. Wu
+			
+			
+	\item \textit{“\href{http://www.cse.psu.edu/~buu1/papers/ps/sigmetrics11.pdf}{Optimal power cost management using stored energy in data centers}”} de R. Urgaonkar, B. Urgaonkar, M. l. J. Neely, y A. Sivasubramaniam
+
+\item \textit{“	\href{http://www.cse.psu.edu/~buu1/papers/ps/sigmetrics12.pdf}{Energy storage in datacenters: what, where, and how much?}”} de  . D. Wang, C. Ren, A. Sivasubramaniam, B. Urgaonkar, and H. Fathy
+		\end{itemize}
+		
+	\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]						% Segunda 
+	\frametitle{Evidencias de soporte}					
+	\begin{center}
+		Contratación a largo plazo de energía hablan:
+		 \begin{itemize}	
+		 	
+		 	
+		 	\item  M. He, S. Murugesan en “\href{http://arxiv.org/pdf/1008.3932.pdf}{Multiple timescale dispatch and scheduling for stochastic reliability in smart grids with wind generation integration}
+		 	
+		 	
+		 	
+		 	\item	L. Huang en \href{https://arxiv.org/pdf/1112.0623.pdf}{Optimal power procurement and demand response with quality-of-usage guarantees}
+		 	
+		 	\item J. Nair en  \href{http://users.cms.caltech.edu/~adamw/papers/Wind-preprint.pdf}{Energy procurement strategies in the presence of intermittent sources}
+		 	
+		 	
+		 	Multi-period optimal procurement and demand responses in the presence of uncrtain supply
+		 	\item L. Jiang en  “\href{http://smart.caltech.edu/papers/multiperiod.pdf}{Multi-period optimal procurement and demand responses in the presence of uncrtain supply}"
+		 	
+		 	
+		 \end{itemize}	
+		
+	\end{center}
+\end{frame}
+
+
+
+\section{Comentarios de 'arbitro:}
+\begin{frame}[fragile]						% Segunda 
+	\frametitle{Comentarios de 'arbitro:}					
+	\begin{center}
+		
+		\begin{itemize}
+			 
+		\item	El artículo realiza un buen estudio del estado del arte del tema.
+			
+		\item	Buen soporte matemático sobre el algoritmo que desarrollan.
+			
+		\item	Falta Implementación del algoritmo para comprobar su funcionamiento 
+		\end{itemize}
+	\end{center}
+\end{frame}
+
+
+			
+\section{Bibliografía}	
+%BIBLIOGRAFIA 
+\begin{frame}[fragile]
+		\frametitle{Bibliografía} 		
+        \bibliography{presentación} 	%Para que aparezca toda la bibliografia que citamos en el documento Biblio.bib, Informe.bbl.
+       	\nocite{*}				%Para que aparezca toda la bibliografia que NO citamos en el documento, pero que utilizamos.
+\end{frame}		
+			
+			\end{document}

@@ -1,0 +1,18 @@
+\frametitle{Análisis de los datos}
+	estudio estadístico
+	\begin{center}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{par}\hlstd{(}\hlkwc{mfrow}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,}\hlnum{2}\hlstd{))}
+\hlkwd{plot}\hlstd{(thume1,hum1,}\hlstr{'l'}\hlstd{,}\hlkwc{col} \hlstd{=} \hlstr{"blue"}\hlstd{,}\hlkwc{main} \hlstd{=} \hlstr{"Datos de humedad 1"}\hlstd{)}
+\hlkwd{plot}\hlstd{(thume2,hum2,}\hlstr{'l'}\hlstd{,}\hlkwc{col} \hlstd{=} \hlstr{"blue"}\hlstd{,}\hlkwc{main} \hlstd{=} \hlstr{"Datos de humedad 2"}\hlstd{)}
+\hlkwd{plot}\hlstd{(ttem1,tem1,}\hlstr{'l'}\hlstd{,}\hlkwc{col} \hlstd{=} \hlstr{"red"}\hlstd{,}\hlkwc{main} \hlstd{=} \hlstr{"Datos de Temperatura 1"}\hlstd{)}
+\hlkwd{plot}\hlstd{(ttem2,tem2,}\hlstr{'l'}\hlstd{,}\hlkwc{col} \hlstd{=} \hlstr{"red"}\hlstd{,}\hlkwc{main} \hlstd{=} \hlstr{"Datos de Temperatura 2"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=2in]{figure/unnamed-chunk-8-1}
+
+\end{knitrout}
+	\end{center}
+

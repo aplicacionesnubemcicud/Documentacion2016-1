@@ -1,0 +1,218 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %																		%
+ %	Plantilla Latex para presentación del proyecto de curso				%
+ %	Programación de Aplicaciones para Internet y la Nube					%
+ %																		%
+ %	Creada por: Duván Pardo, Wilson López
+ % Modificada por: Pedro J. Vargas Barrios								%
+ %																		%
+ %	Versión: 0.2															%
+ %	pedrojvar@gmail.com							%
+ %																		% 
+ %	Se requieren los archivos  presentación.bbl							% 
+ %	El directorio Imagenes que contiene: escudoud.pdf,ECHO_OFF	 		%  
+ %																		%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{beamer}					% Describe el tipo de documento, y el tamaño de la letra del texto
+\usepackage[utf8]{inputenc}					% Define codificación para que permita caracteres latinos (acentos)
+\usepackage[spanish,activeacute]{babel} 		% Paquete para poder escribir con tildes y otros caracteres especiales
+
+\usepackage{amsmath}							% paquete para expresiones matemáticas
+\usepackage{amsfonts}						% paquete para escritura de ecuaciones 
+\usepackage{amssymb}							% paquete para caracteres especiales para ecuaciones 
+
+\usepackage{svg}								% Se utiliza para incluir imágenes vectorizadas en el documento (.pdf)
+\usepackage{hyperref}						% Para hipervinculos
+
+\usepackage{lmodern}							% http://ctan.org/pkg/lm
+\usepackage{listings}						% Para el código fuente
+\usepackage{xcolor}							% Para el color en código fuente
+\usepackage{graphicx}						% Para incluir imágenes
+\graphicspath{{Imagenes/}}					% Directorio de imágenes
+
+\bibliographystyle{apalike} 					% Bibliografia tipo APA
+
+\definecolor{limegreen}{RGB}{50,100,50}		% Definición de color
+\lstdefinestyle{base}{						% Para el color en código fuente
+	language=C,
+	emptylines=1,
+	breaklines=true,
+	showspaces=fasle,
+	showstringspaces=false,
+	extendedchars=true,
+	basicstyle=\ttfamily\color{black},
+	moredelim=**[is][\color{limegreen}]{'}{'},
+	moredelim=**[is][\color{blue}]{&}{&},
+}				
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}	% Muestra numeración al lado del código
+
+\mode<presentation>{	
+	\usetheme{Frankfurt}		
+% Temas: AnnArbor,Antibes, Bergen, Berkeley, Berlin, Boadilla, boxes, CambridgeUS, Copenhagen, Darmstadr, default, Dresden, Frankfurt*, Goettingen, Hannover, LLmenau, JuanLesPins, Luebeck, Madrid, Malmoe, Marburg, Montpellier, PaloAlto, Pittsburgh, Rochester, Singapore, Szeged, Warsaw.	
+	\usecolortheme{orchid}	
+% Colores:albatross, beaver, beetle, crane, default, dolphin, dove, fly, lily, orchid*, rose, seagull, seahorse, sidebartab, structure, whale, wolverine.	 
+}
+
+\logo{\includegraphics[scale=0.04]{escudoud}}
+\title{Proyecto Final \\ --- \\ Desarrollo de aplicación para la generación de
+contenido académico mediante R}
+\author{Estudiante(s): Pedro J. Vargas Barrios}
+\institute[UD]{Universidad Distrital Francisco José de Caldas}
+\date{\today}
+
+\begin{document}	
+	
+	\begin{frame}[fragile]							% Diapositiva Presentación
+		\titlepage 
+		\begin{small}
+			''Generación de contenido académico mediante R''
+		\end{small}
+	\end{frame}	
+
+    	\begin{frame}[fragile]							% Diapositiva Tabla de Contenido
+		\frametitle{Índice}	
+		\tableofcontents
+	\end{frame}	
+
+\section{Introducción}
+		 \begin{frame}[fragile]						% Primera Diapositiva
+			\frametitle{Introducción}
+			\begin{huge}
+			\begin{center}
+				\emph{\textit{Introducción}}
+			\end{center}
+			\end{huge}
+La generación de informes dinámicos a partir de la programación literaria es resultado de la propuesta de Donald Knuth, quien la propuso como una alternativa al tradicional paradigma de la programación estructurada. Con este enfoque el autor/investigador puede plantear sus ideas, ecuaciones o demás métodos que requieran algún tipo de cálculo, y, con ello, mediante código R obtener facilidad para modificar o replicar sus propuestas de investigación.\\
+			
+		\end{frame}	
+
+			
+\section{Descripción}	
+		 \begin{frame}[fragile]
+			\frametitle{Descripción}
+			\begin{huge}
+			\begin{center}
+				\emph{\textit{Descripción del proyecto}}
+			\end{center}
+			\end{huge}
+		\end{frame}		
+		   		
+    		\subsection{Descripción}			
+			\begin{frame}[fragile]
+		\frametitle{Descripción}
+			
+		
+			
+			
+El proyecto busca hacer uso de los servicios de la nube y aprovechar las características de la programación literaria, ambos orientados hacia la elaboración de materíal técnico/académico en un determinado tema, en este caso fundamentos de circuitos. \\
+Se parte de un documento en LaTeX relacionado con el tema de fundamentos de circuitos que obtiene los valores de los ejemplos incluidos en él de una base de datos que estará sobre Amazon Web Service. 
+
+			
+				
+	
+			\end{frame}
+			
+			
+				
+				
+	
+			
+			\section{Objetivos}	
+		 \begin{frame}[fragile]
+			\frametitle{Obetivos}
+			\begin{huge}
+			\begin{center}
+				\emph{\textit{Objetivos}}
+			\end{center}
+			\end{huge}
+		\end{frame}		
+		\subsection{General}			
+		 \begin{frame}[fragile]						% Primera Diapositiva
+			\frametitle{General}
+			
+			\begin{block}{Objetivo General}
+Desarrollar una aplicación que permita presentar mediante LaTeX y R, utilizar material académico y práctico para exponer fundamentos de circutos eléctricos.		
+
+\end{block}
+		\end{frame}
+		
+				\subsection{Objetivos específicos}			
+		 \begin{frame}[fragile]						% Primera Diapositiva
+			\frametitle{Objetivos específicos}
+			
+			\begin{block}{Objetivos Específicos}
+
+\begin{itemize}
+\item Desarrollar una aplicación  que permita presentar mediante LaTeX y R, utilizar material académico y práctico para exponer fundamentos de circuitos.
+\end{itemize}
+\begin{itemize}
+\item Definir un conjunto de circuitos utilizar para presentar los ejercicios académicos del documento.
+\end{itemize}
+\begin{itemize}
+\item Estructurar mediante programación literaria las reglas de los resultados de los ejercicios prácticos propuestos.
+\end{itemize}	
+
+\end{block}
+		\end{frame}
+		
+	\section{Desarrollo del Proyecto}	
+		 \begin{frame}[fragile]
+			\frametitle{Desarrollo del Proyecto}
+			\begin{huge}
+			\begin{center}
+				\emph{\textit{Implementación del proyecto}}
+			\end{center}
+			\end{huge}
+		\end{frame}		
+		\subsection{Configuración del servidor en AWS}	
+		 \begin{frame}[fragile]	
+		 \begin{block}{Configuración del servidor en AWS}
+		 \frametitle{Configuración del servidor en AWS}
+		Se desplegó un servidor en AWS con una base de datos MySQL y un servidor en apache sobre el que se montaría la aplicación web. Con estas características, el servidor
+soporta la interacción del usuario con la base de datos y cuando se requiera, permitirá la conexión co R para realizar las operaciones necesarias.
+
+ \end{block}
+		
+		\end{frame}
+		
+	\subsection{Características de la aplicación web}	
+		 \begin{frame}[fragile]	
+		 \frametitle{Características de la aplicación web}
+		 
+		 \begin{block}{Características de la aplicación web}
+		 
+		La aplicación web se desarrolló en PHP, tiene un conjunto de opciones sobre los diferentes capítulos que permite modificar la información de la base de datos. Esta debe tener información relacionada con el desarrollo del contenido en R Studio.
+
+\end{block}
+		
+		\end{frame}
+		
+		
+		\subsection{Desarrollo en R Studio}	
+		 \begin{frame}[fragile]	
+		 \frametitle{Desarrollo en R Studio}
+		 
+		 \begin{block}{Desarrollo en R Studio}
+		 
+		EL documento en R tiene la estructura e información de un libro común, sin embargo tiene la particularidad de que su contenido puede ser modificado a través de la pagina web. Tiene una conexión a la base de datos en la cual se guardan los datos que un usuario remotamente asigna.
+\end{block}
+		
+		\end{frame}
+	
+	\subsection{Trabajos Futuros}	
+		 \begin{frame}[fragile]	
+		 \frametitle{Trabajos Futuros}
+		 
+		 \begin{block}{Trabajos Futuros}
+		 
+Creación de libros completos que sean modificables con facilidad\\
+Modificación de contenido de papers en ponencias\\
+Modificación de documentos mediante aplicaciones móviles
+\end{block}
+		
+		\end{frame}
+	
+
+				
+\end{document}

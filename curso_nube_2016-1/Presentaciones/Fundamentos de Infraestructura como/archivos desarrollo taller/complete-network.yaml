@@ -1,0 +1,42 @@
+heat_template_version: 2013-05-23
+
+description: This template deploys a router with a port in the public interface
+
+parameters:
+
+  public_network:
+    type: string
+    label: Public network name or ID
+    description: Public network with floating IP addresses.
+    default: ext-net-doctorado
+
+  private_network_cidr:
+    type: string
+    label: Private network CIDR
+    description: Private Network CIDR
+    default: 192.168.200.0/24
+ 
+resources:
+
+  router:
+    type: OS::Neutron::Router
+    properties:
+      external_gateway_info:
+        network: { get_param: public_network }
+
+  private_network:
+    type: OS::Neutron::Net
+
+  private_subnet:
+    type: OS::Neutron::Subnet
+    properties:
+      network_id: { get_resource: private_network }
+      cidr: {get_param: private_network_cidr}
+      dns_nameservers:
+        - 8.8.8.8
+
+  router-interface:
+    type: OS::Neutron::RouterInterface
+    properties:
+      router_id: { get_resource: router }
+      subnet: { get_resource: private_subnet }

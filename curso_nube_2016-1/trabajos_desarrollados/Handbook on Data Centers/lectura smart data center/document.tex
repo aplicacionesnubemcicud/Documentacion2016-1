@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{vmargin}
+\usepackage{hyperref} % hipervinculos web
+\setpapersize{A4}
+\setmargins{2cm}       % margen izquierdo
+{1cm}                        % margen superior
+{16.5cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{0pt}                             % altura del pie de p�gina
+{2cm}                           % espacio entre el texto y el pie de p�gina
+
+
+
+
+\begin{document}
+	
+\begin{center}
+	{\Large \textbf{Programaci\'{o}n de Aplicaciones para Internet y la Nube  \hspace{1cm}	2016-I}}\\
+\end{center}
+
+	\begin{flushright}
+		{\large \textbf{	Informe de lectura de investigación Smart Data Center}}
+		
+	\end{flushright}
+	\textbf{Wilson Ricardo L'opez S'anchez\\	
+	Paper tomado de Handbook on Data Centers de Samee U. Khan y AlbertY. Zomaya Springer Science+Business Media New York 2015	\\	
+	T'itulo del paper: Smart Data center,	\\	
+	Fecha de evaluaci'on 18 de marzo del 2016\\}\\
+\\
+\\
+\begin{enumerate}
+	\item  \textbf{Resumen:} El artículo expone la problemática que se genera debido al gran crecimiento de data center, el consumo energético que estos requieren es muy alto, por esta razón que realizaron un estudio para la optimización de energía en los data center y poder determinar qué cantidad de energía que se puede almacenar en las UPS (sistemas implementados en los data center para protección y reserva de energía en caso de falta de electricidad por parte de los distribuidores). Los data center de hoy en día compras la energía por contrato a largo plazo día por adelantado, la idea que se plantea en el artículo es comprar la electricidad a diferentes redes inteligentes y además del excedente de redes locales o remotas el cual puede llegar a ser más económico debido a que la mayoría de esta energía no se utiliza, en caso que el costo de la energía sea demasiado alto algún día determinado es posible suplir el data center con la energía almacenada en las UPS’s. en el trabajo se centran en resolver por medio de un algoritmo los siguientes  tres grandes aspectos minimizar los costos de funcionamiento, cuanta energía comprar y cómo utilizar eficientemente la energía excedente de la red 
+	
+	\item  \textbf{Contribuci'on de la investigaci'on:} El artículo SI contribuye con la elaboración de un nuevo método para determinar la compra y uso eficiente de la energía por medio de UPS para data center, incluyendo como aporte investigativo en el modelo propuesto la entrega de energía por parte de diferentes proveedores y de las redes locales que proveen energía sobrante del día y que puede llegar a ser más económica que la energía que se compra a largo plazo. el algoritmo que se desarrollaron para este fin fue llamado “smart data center“  en el cual utilizaron algoritmos de optimización Lyapunov.
+	
+	En el caso del CECAD es difícil  aplicar en su totalidad los algoritmos  y procedimientos que plantea el autor del artículo, comenzando por los inconvenientes que se tienen en la ciudad bogotá para tener dos proveedores de energía eléctrica, en dado caso que se pueda llegar a realizar la compra de energía a dos distribuidores diferentes surge el problema de realizar el montaje de todo el tendido eléctrico desde la acometida que da el proveedor hasta el  CECAD, otra posibilidad es la generación por parte de la universidad con el uso de celdas solares instalados en los techos de la universidad, de igual forma se genera la problemática de la instalación del tendido eléctrico para alimentar el CECAD ademas que la radiación solar que presenta la zona donde se encuentra la universidad no es muy alta por esta razón, no es posible el abastecimiento energético del CECAD cuando trabaja a toda su capacidad que es aproximadamente 25 KVA. Una de las partes más interesante que aborda el autor es la optimización de la Utilización de la energía almacenada en las UPS, en el caso del CECAD, se puede pensar en implementar parte del algoritmo que plantean los autores para tener un control de la energía almacenada en las UPS y poder prolongar la vida útil de estas.  
+	
+	\item  \textbf{Evidencias de soporte:} los autores soportan su investigación con 25 referencias bibliográficas, entre las más destacadas que se pueden realizar comparación de investigaciones anteriores realizada son:
+	\begin{itemize}
+		\item 
+	\href{http://www.sciencedirect.com/science/article/pii/S0378779604001257}{\textit{Electricity market price spike forecast with data mining techniques}}. escrito por X. Lu, Xin, Z. Y. Dong, y X. Li. realizaron un estudio de   los precios de la demanda de energía para predecir las futuras demandas de energía 
+		
+		\item en los articulos 	\href{http://sameekhan.seecs.nust.edu.pk/pub/B_K_2013_FGCS.pdf}{A Taxonomy and Survey on Green Data Center Networks}
+		,	\href{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5683561&url=http\%3A\%2F\%2Fieeexplore.ieee.org\%2Fiel5\%2F5682081\%2F5683069\%2F05683561.pdf\%3Farnumber\%3D5683561}{GreenCloud: A Packet-level Simulator of Energyaware Cloud Computing Data Centers} y \href{http://www.hpl.hp.com/techreports/2007/HPL-2007-194.pdf}{No ‘power’ struggles: Coordinated multi-level power management for the data center} estudian la administración de energía de los centros de datos
+		
+		
+		
+		\item	N. Buchbinder,en  \textit{“\href{http://research.microsoft.com/en-us/um/people/navendu/papers/buchbinder11online.pdf}{Online job-migration for reducing the electricity bill in the cloud}.”} ,L. Rao,en , \textit{“\href{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5461933&tag=1}{Minimizing electricity cost: optimization of distributed internet data centers in a multi-electricity-market environment},”}, y \textit{\href{http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5989839}{Distributed coordination of internet data centers under multiregional electricity markets}}  estudian cómo reducir la utilización de energía en data center
+		\item los siguientes artículos estudian el almacenamiento de energía en data center:
+			\begin{itemize}					
+				\item \textit{“\href{http://www.cse.psu.edu/~buu1/papers/ps/asplos12.pdf}{Leveraging stored energyfor handling power emergencies in aggressively provisioned datacenters}”} de. S. Govindan, D. Wang, A. Sivasubramaniam, y B. Urgaonkar
+				
+				\item \textit{“\href{http://www.fang.ece.ufl.edu/mypaper/globecom11guoy.pdf}{Cutting down electricity cost in internet data centers by using energy storage}”}  de Y. Guo, Z. Ding, Y. Fang, and D. Wu
+				
+			
+				
+				\item \textit{“\href{	http://www.cse.psu.edu/~buu1/papers/ps/sigmetrics11.pdf}{Optimal power cost management using stored energy in data centers}”} de R. Urgaonkar, B. Urgaonkar, M. l. J. Neely, y A. Sivasubramaniam
+				
+				\item \textit{“\href{http://www.cse.psu.edu/~buu1/papers/ps/sigmetrics12.pdf}{Energy storage in datacenters: what, where, and how much?}”} de  . D. Wang, C. Ren, A. Sivasubramaniam, B. Urgaonkar, and H. Fathy
+				
+			\end{itemize}
+		
+		\item Finalmente, sobre contratación a largo plazo de energía hablan:
+				 
+		 \begin{itemize}	
+		 	\item  M. He, S. Murugesan en “\href{http://arxiv.org/pdf/1008.3932.pdf}{Multiple timescale dispatch and scheduling for stochastic reliability in smart grids with wind generation integration}" 
+		 	
+		    \item	L. Huang en \href{https://arxiv.org/pdf/1112.0623.pdf}{Optimal power procurement and demand response with quality-of-usage guarantees}"
+		 	
+		 	\item J. Nair en \href{http://users.cms.caltech.edu/~adamw/papers/Wind-preprint.pdf}{ Energy procurement strategies in the presence of intermittent sources}"
+		 	
+		 	\item L. Jiang en  \href{http://smart.caltech.edu/papers/multiperiod.pdf}{“Multi-period optimal procurement and demand responses in the presence of uncrtain supply"}
+		 	
+		 	
+	     \end{itemize}	
+			
+	\end{itemize}
+	
+	\item  \textbf{Comentarios de 'arbitro:} El articulo tiene una muy buena fundamentación teórica y un estudio profundo sobre la temática y los estudios previos realizados, explican de una forma muy sencilla el desarrollo del algoritmo propuesto sin embargo como explican al final del articulo el algoritmo solo fue implementado de forma teórica, pero falta una parte donde muestren los resultados obtenidos por simulación y algún tipo de grafica o tabla donde compare los resultados obtenidos con otros algoritmos o métodos utilizados por otros autores para mejorar la misma problemática. 
+\end{enumerate}
+
+	
+
+\end{document}

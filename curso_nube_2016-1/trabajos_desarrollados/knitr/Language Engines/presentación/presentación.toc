@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{R con otros lenguajes de programaci\IeC {\'o}n}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Resumen}{4}{0}{1}
+\beamer@sectionintoc {2}{Knitr con otros lenguajes de programaci\IeC {\'o}n}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Ejemplos $"Hola$ $Mundo"$}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Ejemplos avanzados en Python}{12}{0}{2}
+\beamer@sectionintoc {3}{Knitr + Python + R + ggplot2}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Resultado de gr\IeC {\'a}ficas}{18}{0}{3}
+\beamer@sectionintoc {4}{Bibliograf\IeC {\'\i }a}{20}{0}{4}

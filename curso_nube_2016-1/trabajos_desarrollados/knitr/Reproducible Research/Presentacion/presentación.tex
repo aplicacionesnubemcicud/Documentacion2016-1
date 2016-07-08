@@ -1,0 +1,203 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %																		%
+ %	Plantilla Latex para presentación del proyecto de curso				%
+ %	Programación de Aplicaciones para Internet y la Nube					%
+ %																		%
+ %	Creada por: Duván Pardo, Wilson López
+ % Modificada por: Pedro J. Vargas Barrios								%
+ %																		%
+ %	Versión: 0.2															%
+ %	pedrojvar@gmail.com							%
+ %																		% 
+ %	Se requieren los archivos  presentación.bbl							% 
+ %	El directorio Imagenes que contiene: escudoud.pdf,ECHO_OFF	 		%  
+ %																		%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{beamer}					% Describe el tipo de documento, y el tamaño de la letra del texto
+\usepackage[utf8]{inputenc}					% Define codificación para que permita caracteres latinos (acentos)
+\usepackage[spanish,activeacute]{babel} 		% Paquete para poder escribir con tildes y otros caracteres especiales
+
+\usepackage{amsmath}							% paquete para expresiones matemáticas
+\usepackage{amsfonts}						% paquete para escritura de ecuaciones 
+\usepackage{amssymb}							% paquete para caracteres especiales para ecuaciones 
+
+\usepackage{svg}								% Se utiliza para incluir imágenes vectorizadas en el documento (.pdf)
+\usepackage{hyperref}						% Para hipervinculos
+
+\usepackage{lmodern}							% http://ctan.org/pkg/lm
+\usepackage{listings}						% Para el código fuente
+\usepackage{xcolor}							% Para el color en código fuente
+\usepackage{graphicx}						% Para incluir imágenes
+\graphicspath{{Imagenes/}}					% Directorio de imágenes
+
+\bibliographystyle{apalike} 					% Bibliografia tipo APA
+
+\definecolor{limegreen}{RGB}{50,100,50}		% Definición de color
+\lstdefinestyle{base}{						% Para el color en código fuente
+	language=C,
+	emptylines=1,
+	breaklines=true,
+	showspaces=fasle,
+	showstringspaces=false,
+	extendedchars=true,
+	basicstyle=\ttfamily\color{black},
+	moredelim=**[is][\color{limegreen}]{'}{'},
+	moredelim=**[is][\color{blue}]{&}{&},
+}				
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}	% Muestra numeración al lado del código
+
+\mode<presentation>{	
+	\usetheme{Frankfurt}		
+% Temas: AnnArbor,Antibes, Bergen, Berkeley, Berlin, Boadilla, boxes, CambridgeUS, Copenhagen, Darmstadr, default, Dresden, Frankfurt*, Goettingen, Hannover, LLmenau, JuanLesPins, Luebeck, Madrid, Malmoe, Marburg, Montpellier, PaloAlto, Pittsburgh, Rochester, Singapore, Szeged, Warsaw.	
+	\usecolortheme{orchid}	
+% Colores:albatross, beaver, beetle, crane, default, dolphin, dove, fly, lily, orchid*, rose, seagull, seahorse, sidebartab, structure, whale, wolverine.	 
+}
+
+\logo{\includegraphics[scale=0.04]{escudoud}}
+\title{Dinamic Documents \\ --- \\ Reproducible Research}
+\author{Estudiante(s): Pedro J. Vargas Barrios}
+\institute[UD]{Universidad Distrital Francisco José de Caldas}
+\date{\today}
+
+\begin{document}	
+	
+	\begin{frame}[fragile]							% Diapositiva Presentación
+		\titlepage 
+		\begin{small}
+			''Investigación Reproducible''
+		\end{small}
+	\end{frame}	
+
+    	\begin{frame}[fragile]							% Diapositiva Tabla de Contenido
+		\frametitle{Índice}	
+		\tableofcontents
+	\end{frame}	
+
+\section{Contexto}
+		 \begin{frame}[fragile]						% Primera Diapositiva
+			\frametitle{Contexto}
+			\begin{huge}
+			\begin{center}
+				\emph{\textit{Reproducibilidad - Programación literaria}}
+			\end{center}
+			\end{huge}
+		\end{frame}	
+	\subsection{Elementos Investigación Reproducible}	
+		\begin{frame}[fragile]						% Segunda Diapositiva
+				\frametitle{Investigación Reproducible}
+				\begin{block}{Jon Claerbout - Universidad de Stanford - 2009}
+''El producto final de la
+investigación no es sólo el papel en sí , sino que también es
+el entorno computacional completo utilizado para producir los resultados en el documento"
+				\end{block}
+				\begin{block}{Elementos para garantizar la reproducibilidad}	
+				
+				\begin{itemize}
+				\item El artículo o informe técnico.
+				\item El programa de cómputo o paquetería de trabajo.
+				\item El experimento numérico o flujo de trabajo, incluyendo los códigos y la secuencia de instrucciones para generar los resultados.
+				\item Los datos empleados.
+				\item Los resultados del experimento, como figuras y datos.
+				\end{itemize}
+				
+
+				\end{block}			
+			\end{frame}	
+			
+\section{Hacia la Investigación Reproducible}	
+		 \begin{frame}[fragile]
+			\frametitle{Etapas destacadas}
+			\begin{huge}
+			\begin{center}
+				\emph{\textit{Hacia la Investigación Reproducible}}
+			\end{center}
+			\end{huge}
+		\end{frame}		
+		   		
+    		\subsection{Etapas destacadas}			
+			\begin{frame}[fragile]
+		
+			
+			\begin{block}{Etapas destacadas}
+			
+			\begin{itemize}
+			    \item (1983) - primera implementación de herramienta llamada WEB para programación literaria, poco adecuada para análisis de datos.
+				\item (1983) - Knuth plantea el paradigma de programación literaria, muy relacionado con la investigación reproducible.
+				\item (1994) -  implementación de herramienta Noweb para programación literaria, poco adecuada para análisis de datos.
+				\item (2002) - Sweave fue una de las primeras implementaciones para tratar los documentos dinámicos en R.
+				\item (2009) - Roger Peng publica en revista de Bioestadística criterios de reproducibilidad de su investigación.
+				\item (2015) - Herramienta roxygen2, implementación de R Doxygen
+				\item (2012 -2015) - El paquete knitr se basa en las ideas de las herramientas anteriores con un framework rediseñado.
+
+				\end{itemize}
+
+				\end{block}
+
+			\end{frame}
+			
+			\section{Buenas y malas prácticas en Investigación Reproducible}	
+		 \begin{frame}[fragile]
+		 
+			\frametitle{Recomendaciones}
+			\begin{huge}
+			\begin{center}
+				\emph{\textit{Buenas y malas prácticas en Investigación Reproducible}}
+			\end{center}
+			\end{huge}
+		\end{frame}		
+		\subsection{Lista de buenas y malas prácticas}			
+		 \begin{frame}[fragile]						% Primera Diapositiva
+			\frametitle{Lista de buenas y malas prácticas}
+En el capítulo se menciona que la clave a tener en cuenta
+para la investigación reproducible es que otras personas puedan
+ser capaces de reproducir nuestros resultados, por lo tanto, se
+debe hacer todo lo posible para hacer que la computación sea portable.			
+			
+	\begin{itemize}
+			    \item Gestionar todos los archivos de origen en el mismo directorio y utilizar rutas relativas siempre que sea posible.
+				\item No cambiar el directorio de trabajo después de que la ejecución ha comenzado.
+				\item Compilar los documentos en una sesión de R limpia.
+				\item Evitar los comandos que requieren la interacción humana.
+				\item Evitar las variables de entorno para el análisis de datos.
+				\item Adjuntar sessioninfo() y las instrucciones de cómo compilar el documento.
+				
+				\end{itemize}
+		\end{frame}
+		
+	\section{Barreras}	
+		 \begin{frame}[fragile]
+			\frametitle{Barreras}
+			\begin{huge}
+			\begin{center}
+				\emph{\textit{Barreras}}
+			\end{center}
+			\end{huge}
+		\end{frame}		
+		\subsection{Lista de obstáculos}	
+		 \begin{frame}[fragile]	
+		 \frametitle{Lista de obstáculos}
+		Se mencionan en el documento algunas barreras prácticas que existen a pesar de todas las ventajas de la Reproducible Research, y se menciona a continuación una lista no exhaustiva de ellas.
+		
+		\begin{itemize}
+			    \item Los datos pueden ser enormes
+				\item Confidencialidad de los datos.
+				\item Versión del software y configuración.
+				\item La competencia.
+
+				
+		\end{itemize}
+		
+		\end{frame}
+		
+
+							
+\section{Bibliografía}	
+%BIBLIOGRAFIA 
+	\begin{frame}[fragile]
+		\frametitle{Bibliografía} 		
+        \bibliography{Biblio} 	%Para que aparezca toda la bibliografia que citamos en el documento Biblio.bib, Informe.bbl.
+       	\nocite{*}				%Para que aparezca toda la bibliografia que NO citamos en el documento, pero que utilizamos.
+	\end{frame}		
+				
+\end{document}

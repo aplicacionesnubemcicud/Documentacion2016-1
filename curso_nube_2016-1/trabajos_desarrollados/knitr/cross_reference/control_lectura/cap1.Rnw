@@ -1,0 +1,6 @@
+<<parent, include=FALSE>>=
+set_parent("referenciascruzadas.Rnw ")
+@
+<<H1>>=
+y <- sum(x^2)
+@

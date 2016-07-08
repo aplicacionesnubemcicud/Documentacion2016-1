@@ -1,0 +1,73 @@
+heat_template_version: 2013-05-23
+ 
+description: Template that installs a wordpress server and supporting MySQL database running on separate servers
+ 
+parameters:
+  image:
+    type: string
+    label: Image name or ID
+    description: Image to be used for server. Please use an Ubuntu based image.
+    default: Ubuntu-Server-14.04-CECAD-r20141201
+  flavor:
+    type: string
+    label: Flavor
+    description: Type of instance (flavor) to be used on the compute instance.
+    default: m1.small
+  public_network:
+    type: string
+    label: Public network name or ID
+    description: Public network to attach server to.
+    default: ext-net-doctorado
+  private_network_cidr:
+    type: string
+    label: Private network CIDR
+    description: Private Network CIDR
+    default: 192.168.200.0/24
+
+ 
+resources:
+
+  my_keypair:
+    type: OS::Nova::KeyPair
+    properties:
+       name: cloudapps
+       save_private_key: True
+
+  network:
+    type: Lib::CECAD::PrivateNetwork
+    properties:
+      public_network: { get_param: public_network }
+      cidr: { private_cidr }
+
+  mysql:
+    type: Lib::CECAD::MySQL
+    properties:
+      image: { get_param: image }
+      flavor: { get_param: flavor }
+      key: { get_param: key }
+      private_network: { get_attr: [network, name] }
+      database_name: wordpress
+      database_user: wordpress_user
+ 
+  wordpress:
+    type: Lib::CECAD::Wordpress
+    properties:
+      image: { get_param: image }
+      flavor: { get_param: flavor }
+      key: { get_param: key }
+      private_network: { get_attr: [network, name] }
+      mysql_server: { get_attr: [mysql, ip] }
+      database_name: wordpress
+      database_user: wordpress_user
+      database_password: { get_attr: [mysql, database_password] }
+
+  floating_ip:
+    type: Lib::MSG::FloatingIP
+    properties:
+      port: { get_attr: [wordpress, port] }
+      public_network: { get_param: public_network }
+
+outputs:
+  ip:
+    description: The public IP address to access Wordpress.
+    value: { get_attr: [floating_ip, ip] }

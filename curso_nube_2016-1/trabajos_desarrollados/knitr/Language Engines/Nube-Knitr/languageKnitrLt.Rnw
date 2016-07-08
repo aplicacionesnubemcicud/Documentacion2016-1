@@ -1,0 +1,187 @@
+\documentclass{article}
+\usepackage[sc]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{url}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+\begin{document}
+<<setup, include=FALSE, cache=FALSE>>=
+library(knitr)
+# set global chunk options
+opts_chunk$set(fig.path='figure/minimal-', fig.align='center', fig.show='hold')
+options(formatR.arrow=TRUE,width=90)
+@
+
+
+\title{Knitr Motores de lenguaje / Language Engines - Programación de aplicaciones para Internet y la Nube.}
+\author{Andres Julian Moreno M. Cód. 20152195015}
+\maketitle
+
+El presente documento dinámico es generado para  el informe de programación literaria para informes de experimentos computacionales en la nube.\\
+
+Es una herramienta la cual tiene por objetivo la generación de documentos dinámicos, esta herramienta funciona en el lenguaje R, y permite trabajar desde la interfaz Rstudio. Permitiendo integrar las funcionalidades de R en documentos de tipo científico y académicos LATEX, Markdown y también en documentos o publicaciones sobre HTML, a través de la programación literaria busca fortalecer la reproducibilidad de la investigación.\\
+
+Knitr permite integrar R con otros lenguajes de programación como $python, Perl, C, C++, shell, Awk,\\ SAS, Scala, Haskell, Graphviz, TikZ y Coffeescript$ en un unico documento dinámico.\\
+
+\subsubsection*{Por ejemplo vamos a ejecutar un trozo de R, sobre este documento dinámico de tipo R Markdown}
+<<r>>=
+library(knitr)
+set.seed(1234)
+rnorm(5)
+@
+
+\subsubsection*{Con el siguiente comando observamos cuales son todos los lenguajes soportados por Knitr:} 
+<<r1>>=
+names(knit_engines$get())
+@
+
+\subsubsection*{Ahora un Ejemplo de R un poco complejo incluyendo un par de gráficas, integrando el paquete de graficos para R ggplot2}
+<<r2, fig.width=4, fig.height=4, out.width='.4\\linewidth'>>=
+## tomado de http://yihui.name/knitr/
+fit <- lm(dist ~ speed, data = cars) 
+par(mar = c(4, 4, 1, 0.1), mgp = c(2, 1, 0))
+with(cars, plot(speed, dist, panel.last = abline(fit)))
+text(10, 100, "$Y = \\beta_0 + \\beta_1x + \\epsilon$")
+library(ggplot2)
+qplot(speed, dist, data = cars) + geom_smooth()
+@
+
+\subsection*{Soporte}
+
+Como los $chunk hooks$ (trozos de código), los motores o lenguajes están soportados por $Knitr$ y $R$.\\
+
+Las funciones chunk se encargan de ejecutar el chunk (trozo de código) en el lenguaje determinado por el usuario y ejecutar el código en R, obteniendo resultados y mostrando su salida, para la mayoría de los casos, el código se comunica con los programas externos mediante la funciona del sistema, $system()$.\\
+
+\subsection*{Como Funciona Knitr}
+
+Todos los lenguajes que soporta Knitr son guardados en la función $knit_engines$, la cual cuenta con métodos $get()$ y $set()$, como la ejecución de funciones chunk hooks y chunk options, entonces si por ejemplo queremos generar un documento en Python se debe seleccionar la función `engine` y asignarle la opción de python, como por ejemplo $engine='python'$ o $engine='awk'$ si queremos ejecutar otro lenguaje. El objeto $knit_engines$ almacena una serie de funciones con nombre del lenguaje soportado.\\
+
+\section*{Ejemplo en $Python$}
+
+A continuación se muestran varios ejemplos de programas sencillos hechos en $Python$ y ejecutados en $R$, gracias a $Knitr$ y los $chunk engine$.
+
+\subsubsection*{Programa 1: Mostrar numeros Naturales}
+<<r4, engine='python'>>=
+n = 1
+while n <= 30: 
+    print n,
+## Imprime los primeros 30 numeros naturales
+    n += 1
+@
+
+\subsubsection*{Programa 2: Sumas}
+<<r5, engine='python'>>=
+## Imprime la suma de 1+2+3+4+....+50
+h = range(1, 51)
+print sum(h)
+@
+
+\subsubsection*{Programa 3: Hola Mundo}
+<<r6, engine='python'>>=
+## Imprime Hola Mundo
+x= "Hola Mundo"
+print x
+@
+
+\subsubsection*{Programa 4: Importando Librerias y el $seno(\pi)$}
+<<r7, engine='python'>>=
+import math
+## calcular el seno de pi
+y= math.sin(math.pi)
+print y
+@
+
+\subsubsection*{Programa 5: Numeros Primos en una sola linea}
+<<r8, engine='python'>>=
+#Lista de numeros primos entre 1 y 100 en una sola linea
+c = [i for i in xrange(2,101) if (i%2!=0 or i==2) and (i%3!=0 or i==3) 
+  and (i%5!=0 or i==5) and (i%7!=0 or i==7)]
+print c
+#Tomado de https://gist.github.com/developingo/2772442
+@
+En los anteriores 5 ejemplos observamos como funciona Language Engines con Python, en el primer segmento muestra el código que se ejecuta en python, y en el siguiente recuadro muestra el resultado de los comandos ejecutados en el lenguaje seleccionado $(\#\# resultado)$.
+
+\section*{Hola Mundo en diferentes Lenguajes con Knitr}
+
+\subsection*{Perl}
+<<r9, eval=TRUE, engine='perl'>>=
+$test = "Hola Mundo";
+$test =~ s/j/h/;
+print $test
+@
+
+\subsection*{Awk}
+<<r10, eval=TRUE, engine='awk'>>=
+BEGIN { print "Hola mundo"; exit }
+@
+
+\subsection*{Ruby}
+<<r11, eval=TRUE, engine='ruby'>>=
+x = 'Hola Mundo!'
+print x
+@
+
+\subsection*{Bash}
+<<r12, eval=TRUE, engine='bash'>>=
+echo Hola Mundo!!!
+@
+
+\subsection*{Python}
+<<r13, engine='python'>>=
+x = 'Hola, Hola Mundo, Hola Internet!'
+print(x)
+print(x.split(' '))
+@
+
+En los anteriores ejemplos se ha ejecutado la función básica de imprimir una cadena de caracteres, se ha realizado el famoso ejemplo $Hola Mundo$, realizado cuando uno se inicia en un nuevo lenguaje de programación.
+
+Los ejemplos están basados en  \url{http://yihui.name/knitr/demo/engines/}
+
+\section*{A continuación se muestra un ejemplo tratando una base de datos}
+\subsection*{Knitr + Python + R + ggplot2}
+En este Ejemplo se presenta la interacción entre Knitr, Python, R y ggplot2.\\
+
+Definiendo X en python:
+<<r14, engine='python'>>=
+def f(x):
+  return x + 2
+f(2)
+@
+Este ejemplo esta basado en [ggplot2] \url{http://github.com/hadley/ggplot2} y [notedown]\url{https://github.com/aaren/notedown}.
+\subsection*{Se carga la libreria ggoplot en R, con el siguiente chunk}
+<<r15>>=
+library(ggplot2)
+@
+\subsection*{Cargando una base de datos ejemplo}
+Usaremos la base de datos de flores; [iris]\url{http://stat.ethz.ch/R-manual/R-patched/library/datasets/html/iris.html}.
+
+<<r16>>=
+head(iris)
+@
+
+\subsection*{Gráficando}
+Se crea una gráfica: scatterplot of $Sepal.Length$ with $Petal.Length$.
+<<r17, fig.width=4, fig.height=4>>=
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length)) +
+  geom_point()
+@
+\subsection*{Adicionando color al gráfico}
+<<r18, fig.width=5, fig.height=4>>=
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length)) +
+  geom_point(aes(color = Species))
+@
+
+
+Realizado en la Universidad Distrital Francisco José de Caldas, Maestría en Ciencias de la Información y las Comunicaciones.\\
+
+Se compilaron en total 18 chunks.
+\end{document}

@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Cuello de Botella}{3}{0}{1}
+\beamer@sectionintoc {2}{Adquisici\IeC {\'o}n de datos}{4}{0}{2}
+\beamer@sectionintoc {3}{Resultados}{7}{0}{3}
+\beamer@sectionintoc {4}{Conclusiones}{9}{0}{4}
+\beamer@sectionintoc {5}{Bibliograf\IeC {\'\i }a}{10}{0}{5}

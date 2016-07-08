@@ -1,0 +1,17 @@
+\frametitle{Segmentos de códigos basados en líneas}
+Como ejemplo guardamos los numero del 1 al 12 en un archivo con el nombre ejemplo2.R\\
+1 2 3 4 5 6 7 8 9 10 11 12 \\
+Vamos a tomar la línea 1-4,5-8 y 11-12 del archivo de R anterior con ellos formaremos los segmentos de código con las etiquetas E, F y G, dicho proceso se realiza de la siguiente manera:\\
+\begin{lstlisting}
+read\_chunk("ejemplo2.R", labels = c("E", "F", "G"), from = c(1,5, 11), to = c(4,8,12))
+\end{lstlisting}
+
+Así podemos llamar cualquiera de los tres segmentos de código en cualquier momento:\\
+\begin{lstlisting}
+<<E>> =
+@
+<<F>> =
+@
+<<G>> =
+@
+\end{lstlisting}

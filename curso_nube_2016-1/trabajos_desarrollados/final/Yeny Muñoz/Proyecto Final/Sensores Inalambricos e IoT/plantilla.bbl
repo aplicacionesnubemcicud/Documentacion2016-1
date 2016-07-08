@@ -1,0 +1,18 @@
+\begin{thebibliography}{}
+
+\bibitem[Yihui Xie, 2013]{Biblio1}
+Yihui Xie (2013).
+\newblock {\em Dynamic Documents with R and knitr}.
+\newblock CRC Press 2016. 2 Ed.
+
+\bibitem[Aakvaag, 2006]{Aakvaag2006}
+Aakvaag, N. (2006).
+\newblock {\em Redes de sensores inalambricos}.
+\newblock Revista ABB
+
+\bibitem[Ohri, 2014]{Ohri2014}
+Ohri, A. (2014).
+\newblock {\em R for Cloud Computing An Approach for Data Scientists}.
+\newblock Springer Science+Business Media New York 2014
+
+\end{thebibliography}

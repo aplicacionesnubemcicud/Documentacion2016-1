@@ -1,0 +1,13 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{3}{0}{1}
+\beamer@sectionintoc {2}{Descripci\IeC {\'o}n}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Descripci\IeC {\'o}n}{5}{0}{2}
+\beamer@sectionintoc {3}{Objetivos}{6}{0}{3}
+\beamer@subsectionintoc {3}{1}{General}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{Objetivos espec\IeC {\'\i }ficos}{8}{0}{3}
+\beamer@sectionintoc {4}{Desarrollo del Proyecto}{9}{0}{4}
+\beamer@subsectionintoc {4}{1}{Configuraci\IeC {\'o}n del servidor en AWS}{10}{0}{4}
+\beamer@subsectionintoc {4}{2}{Caracter\IeC {\'\i }sticas de la aplicaci\IeC {\'o}n web}{11}{0}{4}
+\beamer@subsectionintoc {4}{3}{Desarrollo en R Studio}{12}{0}{4}
+\beamer@subsectionintoc {4}{4}{Trabajos Futuros}{13}{0}{4}
